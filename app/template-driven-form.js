@@ -1,0 +1,43 @@
+System.register(["@angular/core"], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    var __metadata = (this && this.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
+    var core_1;
+    var TemplateDrivenFormComponent;
+    return {
+        setters:[
+            function (core_1_1) {
+                core_1 = core_1_1;
+            }],
+        execute: function() {
+            TemplateDrivenFormComponent = (function () {
+                function TemplateDrivenFormComponent() {
+                    this.user = { mail: '', password: '' };
+                }
+                TemplateDrivenFormComponent.prototype.onSubmit = function (form) {
+                    this.user.mail = form.value['email'];
+                    this.user.password = form.controls['password'].value;
+                };
+                TemplateDrivenFormComponent = __decorate([
+                    core_1.Component({
+                        selector: 'my-template-form',
+                        template: "\n        <div class=\"col-md-6 col-md-offset-3\">\n        <h2>Sign-up Form</h2>\n          <form (ngSubmit)=\"onSubmit(f)\" #f=\"ngForm\">\n            <div class=\"form-group form-group-sm\">\n              <label for=\"mail\" class=\"col-sm-2 control-label\">Mail</label>\n                <input \n                    type=\"text\" \n                    class=\"form-control\" \n                    id=\"mail\"\n                    ngControl=\"email\"\n                    required\n                    #email=\"ngForm\">\n                    <span class=\"validation-error\" *ngIf=\"!email.valid\">Not Valid</span>\n            </div> \n               <div class=\"form-group form-group-sm\">\n                    <label for=\"password\" class=\"col-sm-2 control-label\">Password</label>\n                  <input \n                    type=\"text\" \n                    class=\"form-control\" \n                    id=\"password\"\n                    ngControl=\"password\"\n                    required\n                    #password=\"ngForm\">\n                    <span class=\"validation-error\" *ngIf=\"!password.valid\">Not Valid</span>\n               </div>\n               <div class=\"form-group form-group-sm\">\n                    <label for=\"confirm-password\" class=\"col-sm-2 control-label\">Confirm</label>\n                  <input \n                    type=\"text\" \n                    class=\"form-control\"\n                    id=\"confirm-password\" \n                    ngControl=\"confirm-password\"\n                    required\n                    #passwordConfirm=\"ngForm\">\n                    <span class=\"validation-error\" *ngIf=\"!passwordConfirm.valid\">Not Valid</span>\n                <div class=\"form-group\">\n                  <button \n                    type=\"submit\" \n                    class=\"btn btn primary\" \n                    [disabled]=\"!f.valid || password.value !== passwordConfirm.value\">Submit</button> \n                </div>\n            </div><!-- /.row -->\n            </form>\n            <h2>You submitted</h2>\n            <div>Mail: {{user.mail}}</div>\n            <div>Password: {{user.password}}</div>\n        </div>\n    "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], TemplateDrivenFormComponent);
+                return TemplateDrivenFormComponent;
+            }());
+            exports_1("TemplateDrivenFormComponent", TemplateDrivenFormComponent);
+        }
+    }
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlbXBsYXRlLWRyaXZlbi1mb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBdURBO2dCQUFBO29CQUNJLFNBQUksR0FBRyxFQUFDLElBQUksRUFBRSxFQUFFLEVBQUUsUUFBUSxFQUFFLEVBQUUsRUFBQyxDQUFDO2dCQU1wQyxDQUFDO2dCQUpHLDhDQUFRLEdBQVIsVUFBUyxJQUFJO29CQUNULElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7b0JBQ3JDLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDLENBQUMsS0FBSyxDQUFDO2dCQUN6RCxDQUFDO2dCQTNETDtvQkFBQyxnQkFBUyxDQUFDO3dCQUNQLFFBQVEsRUFBRSxrQkFBa0I7d0JBQzVCLFFBQVEsRUFBRSw2cUVBZ0RUO3FCQUNKLENBQUM7OytDQUFBO2dCQVNGLGtDQUFDO1lBQUQsQ0FQQSxBQU9DLElBQUE7WUFQRCxxRUFPQyxDQUFBIiwiZmlsZSI6InRlbXBsYXRlLWRyaXZlbi1mb3JtLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICAgIHNlbGVjdG9yOiAnbXktdGVtcGxhdGUtZm9ybScsXHJcbiAgICB0ZW1wbGF0ZTogYFxyXG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtNiBjb2wtbWQtb2Zmc2V0LTNcIj5cclxuICAgICAgICA8aDI+U2lnbi11cCBGb3JtPC9oMj5cclxuICAgICAgICAgIDxmb3JtIChuZ1N1Ym1pdCk9XCJvblN1Ym1pdChmKVwiICNmPVwibmdGb3JtXCI+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwIGZvcm0tZ3JvdXAtc21cIj5cclxuICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwibWFpbFwiIGNsYXNzPVwiY29sLXNtLTIgY29udHJvbC1sYWJlbFwiPk1haWw8L2xhYmVsPlxyXG4gICAgICAgICAgICAgICAgPGlucHV0IFxyXG4gICAgICAgICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCIgXHJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3M9XCJmb3JtLWNvbnRyb2xcIiBcclxuICAgICAgICAgICAgICAgICAgICBpZD1cIm1haWxcIlxyXG4gICAgICAgICAgICAgICAgICAgIG5nQ29udHJvbD1cImVtYWlsXCJcclxuICAgICAgICAgICAgICAgICAgICByZXF1aXJlZFxyXG4gICAgICAgICAgICAgICAgICAgICNlbWFpbD1cIm5nRm9ybVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwidmFsaWRhdGlvbi1lcnJvclwiICpuZ0lmPVwiIWVtYWlsLnZhbGlkXCI+Tm90IFZhbGlkPC9zcGFuPlxyXG4gICAgICAgICAgICA8L2Rpdj4gXHJcbiAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwIGZvcm0tZ3JvdXAtc21cIj5cclxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwicGFzc3dvcmRcIiBjbGFzcz1cImNvbC1zbS0yIGNvbnRyb2wtbGFiZWxcIj5QYXNzd29yZDwvbGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgIDxpbnB1dCBcclxuICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIGNsYXNzPVwiZm9ybS1jb250cm9sXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgaWQ9XCJwYXNzd29yZFwiXHJcbiAgICAgICAgICAgICAgICAgICAgbmdDb250cm9sPVwicGFzc3dvcmRcIlxyXG4gICAgICAgICAgICAgICAgICAgIHJlcXVpcmVkXHJcbiAgICAgICAgICAgICAgICAgICAgI3Bhc3N3b3JkPVwibmdGb3JtXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJ2YWxpZGF0aW9uLWVycm9yXCIgKm5nSWY9XCIhcGFzc3dvcmQudmFsaWRcIj5Ob3QgVmFsaWQ8L3NwYW4+XHJcbiAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cCBmb3JtLWdyb3VwLXNtXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPGxhYmVsIGZvcj1cImNvbmZpcm0tcGFzc3dvcmRcIiBjbGFzcz1cImNvbC1zbS0yIGNvbnRyb2wtbGFiZWxcIj5Db25maXJtPC9sYWJlbD5cclxuICAgICAgICAgICAgICAgICAgPGlucHV0IFxyXG4gICAgICAgICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCIgXHJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3M9XCJmb3JtLWNvbnRyb2xcIlxyXG4gICAgICAgICAgICAgICAgICAgIGlkPVwiY29uZmlybS1wYXNzd29yZFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIG5nQ29udHJvbD1cImNvbmZpcm0tcGFzc3dvcmRcIlxyXG4gICAgICAgICAgICAgICAgICAgIHJlcXVpcmVkXHJcbiAgICAgICAgICAgICAgICAgICAgI3Bhc3N3b3JkQ29uZmlybT1cIm5nRm9ybVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwidmFsaWRhdGlvbi1lcnJvclwiICpuZ0lmPVwiIXBhc3N3b3JkQ29uZmlybS52YWxpZFwiPk5vdCBWYWxpZDwvc3Bhbj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxidXR0b24gXHJcbiAgICAgICAgICAgICAgICAgICAgdHlwZT1cInN1Ym1pdFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIGNsYXNzPVwiYnRuIGJ0biBwcmltYXJ5XCIgXHJcbiAgICAgICAgICAgICAgICAgICAgW2Rpc2FibGVkXT1cIiFmLnZhbGlkIHx8IHBhc3N3b3JkLnZhbHVlICE9PSBwYXNzd29yZENvbmZpcm0udmFsdWVcIj5TdWJtaXQ8L2J1dHRvbj4gXHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPC9kaXY+PCEtLSAvLnJvdyAtLT5cclxuICAgICAgICAgICAgPC9mb3JtPlxyXG4gICAgICAgICAgICA8aDI+WW91IHN1Ym1pdHRlZDwvaDI+XHJcbiAgICAgICAgICAgIDxkaXY+TWFpbDoge3t1c2VyLm1haWx9fTwvZGl2PlxyXG4gICAgICAgICAgICA8ZGl2PlBhc3N3b3JkOiB7e3VzZXIucGFzc3dvcmR9fTwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgYFxyXG59KVxyXG5cclxuZXhwb3J0IGNsYXNzIFRlbXBsYXRlRHJpdmVuRm9ybUNvbXBvbmVudCB7XHJcbiAgICB1c2VyID0ge21haWw6ICcnLCBwYXNzd29yZDogJyd9O1xyXG5cclxuICAgIG9uU3VibWl0KGZvcm0pe1xyXG4gICAgICAgIHRoaXMudXNlci5tYWlsID0gZm9ybS52YWx1ZVsnZW1haWwnXTtcclxuICAgICAgICB0aGlzLnVzZXIucGFzc3dvcmQgPSBmb3JtLmNvbnRyb2xzWydwYXNzd29yZCddLnZhbHVlO1xyXG4gICAgfVxyXG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

@@ -1,0 +1,22 @@
+body {
+  padding: 32px;
+  margin: 32px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+button {
+  margin-left: 15px;
+}
+
+.validation-error {
+  color: red;
+}
+span {
+  margin-left: 15px;
+}
